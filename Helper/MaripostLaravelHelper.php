@@ -4,7 +4,7 @@
 /**
  * Class MaripostLaravelHelper
  */
-class MaripostLaravelHelper extends 
+class MaripostLaravelHelper
 {
     
 }
