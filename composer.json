@@ -1,0 +1,31 @@
+{
+  "name": "rxmg/rxpkg-esp-maropost",
+  "description": "Package to connect to Maropost ESP",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Nick T-bone Kiermaier",
+      "email": "nickkiermaier@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.0.0",
+    "rxmg/esp-interface": "dev-master",
+    "guzzlehttp/guzzle": "^6.3@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Rxmg\\Esp\\Maripost\\": "."
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.packagist.com/rxmg/"
+    },
+    {
+      "packagist.org": false
+    }
+  ]
+}
