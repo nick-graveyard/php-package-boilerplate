@@ -12,11 +12,13 @@
   "require": {
     "php": ">=7.0.0",
     "rxmg/esp-interface": "dev-master",
-    "guzzlehttp/guzzle": "^6.3@dev"
+    "guzzlehttp/guzzle": "^6.3@dev",
+    "fzaninotto/faker": "^1.9@dev",
+    "vlucas/phpdotenv": "^2.5@dev"
   },
   "autoload": {
     "psr-4": {
-      "Rxmg\\Esp\\Maripost\\": "."
+      "Rxmg\\Esp\\Maropost\\": "."
     }
   },
   "repositories": [
@@ -27,5 +29,9 @@
     {
       "packagist.org": false
     }
-  ]
+  ],
+  "require-dev": {
+    "fzaninotto/faker": "^1.9@dev",
+    "phpunit/phpunit": "^7.3@dev"
+  }
 }
