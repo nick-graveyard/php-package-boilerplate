@@ -1,6 +1,9 @@
 <?php
 namespace Rxmg\Esp\Maropost\Connector;
-require_once __DIR__ . '/../vendor/autoload.php';
+// Only require if running as standalone
+if (file_exists(__DIR__ . '/../vendor/autoload.php')) {
+    require_once __DIR__ . '/../vendor/autoload.php';
+}
 use Rxmg\EspInterface\Interfaces\PhpEspConnectorInterface;
 use GuzzleHttp\Client;
 
@@ -80,6 +83,7 @@ class PhpConnector implements PhpEspConnectorInterface
      */
     protected function post(string $api_target, array $json_data, string $format = "json"): array
     {
+        $this->isConfigured();
         $this->errors = null;
         $url = "http://api.maropost.com/accounts/$this->acct/$api_target.$format?auth_token=$this->auth";
         $client = new Client();
@@ -110,6 +114,7 @@ class PhpConnector implements PhpEspConnectorInterface
      */
     protected function get(string $api_target, array $data, string $format = "json"): array
     {
+        $this->isConfigured();
         $this->errors = null;
         $params = [
             'auth_token' => $this->auth,
@@ -126,6 +131,16 @@ class PhpConnector implements PhpEspConnectorInterface
                 return $response;
             }
             throw $e;
+        }
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function isConfigured()
+    {
+        if (empty($this->acct) || empty($this->auth)) {
+            throw new \Exception('Account information is not configured!');
         }
     }
 
