@@ -9,12 +9,12 @@
     }
   ],
   "minimum-stability": "dev",
+  "version": "1.0.0",
   "require": {
     "php": ">=7.0.0",
     "rxmg/esp-interface": "dev-master",
     "guzzlehttp/guzzle": "^6.3@dev",
-    "fzaninotto/faker": "^1.9@dev",
-    "vlucas/phpdotenv": "^2.5@dev"
+    "rxmg/rxpkg-esp-maropost": "dev-master"
   },
   "autoload": {
     "psr-4": {
@@ -32,6 +32,7 @@
   ],
   "require-dev": {
     "fzaninotto/faker": "^1.9@dev",
-    "phpunit/phpunit": "^7.3@dev"
+    "phpunit/phpunit": "^7.3@dev",
+    "vlucas/phpdotenv": "^2.5@dev"
   }
 }

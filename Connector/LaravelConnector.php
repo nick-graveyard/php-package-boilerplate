@@ -3,6 +3,7 @@ namespace Rxmg\Esp\Maripost\Connector;
 
 use Rxmg\EspInterface\Interfaces\EspConnectorInterface;
 use Rxmg\Esp\Maropost\Connector\PhpConnector;
+use Illuminate\Support\Collection;
 
 /**
  * Created by PhpStorm.
@@ -10,8 +11,11 @@ use Rxmg\Esp\Maropost\Connector\PhpConnector;
  * Date: 8/1/18
  * Time: 10:26 AM
  */
-class LaravelConnector
+class LaravelConnector implements EspConnectorInterface
 {
+    /**
+     * @var PhpConnector
+     */
     public $php_connector;
 
     /**

@@ -1,1 +1,1 @@
-C:30:"PHPUnit\Runner\TestResultCache":137:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:3:{s:13:"testConfigure";d:0.002;s:17:"testContactCreate";d:0.916;s:15:"testSubscribeTo";d:0.419;}}}
+C:30:"PHPUnit\Runner\TestResultCache":137:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:3:{s:13:"testConfigure";d:0.008;s:17:"testContactCreate";d:0.859;s:15:"testSubscribeTo";d:0.465;}}}
