@@ -13,8 +13,7 @@
   "require": {
     "php": ">=7.0.0",
     "rxmg/esp-interface": "dev-master",
-    "guzzlehttp/guzzle": "^6.3@dev",
-    "rxmg/rxpkg-esp-maropost": "dev-master"
+    "guzzlehttp/guzzle": "^6.3@dev"
   },
   "autoload": {
     "psr-4": {
