@@ -16,7 +16,7 @@ use GuzzleHttp\Client;
 class PhpConnector implements PhpEspConnectorInterface
 {
 
-    public $errors;
+    public $errors = [];
     public $acct;
     public $auth;
     public $format;
@@ -115,7 +115,6 @@ class PhpConnector implements PhpEspConnectorInterface
     protected function get(string $api_target, array $data, string $format = "json"): array
     {
         $this->isConfigured();
-        $this->errors = null;
         $params = [
             'auth_token' => $this->auth,
         ];
@@ -149,6 +148,7 @@ class PhpConnector implements PhpEspConnectorInterface
      * @param string $list_id
      * @param array|null $details
      * @return bool
+     * @throws \Throwable
      */
     public function subscribeTo(string $email, string $list_id, array $details = null): bool
     {
@@ -156,10 +156,10 @@ class PhpConnector implements PhpEspConnectorInterface
         try {
             $response = $this->post("lists/$list_id/contacts", $details);
             if ($response) return true;
-            die();
         } catch (\Throwable $e) {
-            return false;
+            throw $e;
         }
+        return false;
     }
 
     /**

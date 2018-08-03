@@ -1,5 +1,5 @@
 <?php
-namespace Rxmg\Esp\Maripost\Connector;
+namespace Rxmg\Esp\Maropost\Connector;
 
 use Rxmg\EspInterface\Interfaces\EspConnectorInterface;
 use Rxmg\Esp\Maropost\Connector\PhpConnector;
@@ -71,6 +71,6 @@ class LaravelConnector implements EspConnectorInterface
      */
     public function getErrors(): array
     {
-        return $this->php_connector->errors();
+        return $this->php_connector->getErrors();
     }
 }
