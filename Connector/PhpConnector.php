@@ -93,7 +93,7 @@ class PhpConnector implements PhpEspConnectorInterface
                 'headers' => [
                     'Accept' => 'application/json'
                 ],
-                'debug' => self::$debug_guzzle,
+                'debug' => self::$debug_guzzle
             ]);
             return json_decode($response->getBody(), true);
         } catch (\Throwable $e) {
@@ -153,6 +153,13 @@ class PhpConnector implements PhpEspConnectorInterface
     public function subscribeTo(string $email, string $list_id, array $details = null): bool
     {
         $details['email'] = $email;
+
+        $details['custom_field'] = [
+            "city" => $details['city'] ?? null,
+            "state" => $details['state'] ?? null,
+            "zip" => $details['zip'] ?? null
+        ];
+
         try {
             $response = $this->post("lists/$list_id/contacts", $details);
             if ($response) return true;

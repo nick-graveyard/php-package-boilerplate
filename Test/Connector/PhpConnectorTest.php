@@ -39,7 +39,7 @@ class PhpConnectorTest extends TestCase
 
     public function testContactCreate()
     {
-        $result = $this->connector->subscribeTo('nick.k@rxmg.com', '1', ['first_name' => 'nick2', 'last_name' => 'kiermaier']);
+        $result = $this->connector->subscribeTo('nick.k@rxmg.com', '1', ['first_name' => 'nick2', 'last_name' => 'kiermaier', 'city'=>'New Orleans', 'state'=>'Louisiana', 'zip'=>'70115']);
         $this->assertTrue($result == true);
     }
 
