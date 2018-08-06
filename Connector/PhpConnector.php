@@ -202,5 +202,4 @@ class PhpConnector implements PhpEspConnectorInterface
     {
         return $this->errors ?? [];
     }
-
 }
