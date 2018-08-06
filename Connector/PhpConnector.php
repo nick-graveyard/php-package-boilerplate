@@ -200,7 +200,7 @@ class PhpConnector implements PhpEspConnectorInterface
      */
     public function getErrors(): array
     {
-        return $this->errors;
+        return $this->errors ?? [];
     }
 
 }
