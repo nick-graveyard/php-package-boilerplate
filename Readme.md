@@ -7,6 +7,7 @@
 
 ### Notes
 * This package fits with rxmg/esp-interface specs for connecting to an ESP
+    * https://github.com/RXMG/rxpkg-esp-interface
 * There is also a RawPhpVersion of this package that follows the same specs but take primitive params instead of Laravel Collections
 
 
