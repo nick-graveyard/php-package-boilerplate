@@ -1,23 +1,22 @@
 {
-  "name": "rxmg/rxpkg-esp-maropost",
-  "description": "Package to connect to Maropost ESP",
+  "name": "<<insertPackageNameHere>>",
+  "description": "<<insertPackageDescriptionHere>>",
   "type": "library",
   "authors": [
     {
-      "name": "Nick T-bone Kiermaier",
-      "email": "nickkiermaier@gmail.com"
+      "name": "<<insertAuthorDescriptionHere>>",
+      "email": "<<insertContactEmailDescriptionHere>>"
     }
   ],
   "minimum-stability": "dev",
   "version": "1.0.0",
   "require": {
     "php": ">=7.0.0",
-    "rxmg/esp-interface": "dev-master",
     "guzzlehttp/guzzle": "^6.3@dev"
   },
   "autoload": {
     "psr-4": {
-      "Rxmg\\Esp\\Maropost\\": "."
+      "<<insertPackageNameSpaceHere>>": "."
     }
   },
   "repositories": [
@@ -32,6 +31,7 @@
   "require-dev": {
     "fzaninotto/faker": "^1.9@dev",
     "phpunit/phpunit": "^7.3@dev",
-    "vlucas/phpdotenv": "^2.5@dev"
+    "vlucas/phpdotenv": "^2.5@dev",
+    "graham-campbell/testbench": "^5.0@dev"
   }
 }

@@ -1,8 +1,7 @@
 <?php
-namespace Rxmg\Esp\Maropost\Test\Connector;
+namespace <<insertNameSpaceHere>>\Test\Connector;
 $approot = __DIR__ . "/../..";
 require_once "$approot/vendor/autoload.php";
-use Rxmg\Esp\Maropost\Connector\PhpConnector as MaropostPhpConnector;
 use PHPUnit\Framework\TestCase;
 use Dotenv\Dotenv;
 use \Exception;
@@ -21,31 +20,21 @@ class PhpConnectorTest extends TestCase
 
     protected function setUp()
     {
-        $this->connector = new MaropostPhpConnector([
-            'account' => getenv('MAROPOST_ACCT'),
-            'auth' => getenv('MAROPOST_AUTH')
-        ]);
+        //TBI
     }
 
     public function testConfigure()
     {
-        $maropost = new MaropostPhpConnector();
-        $final = $maropost->configure(['auth' => 'testauth', 'account' => 'testaccount']);
-        $this->assertTrue($final);
-
-        $this->expectException(Exception::class);
-        $maropost->configure([]);
+      // TBI
     }
 
     public function testContactCreate()
     {
-        $result = $this->connector->subscribeTo('nick.k@rxmg.com', '1', ['first_name' => 'nick2', 'last_name' => 'kiermaier', 'city'=>'New Orleans', 'state'=>'Louisiana', 'zip'=>'70115']);
-        $this->assertTrue($result == true);
+        // TBI
     }
 
     public function testSubscribeTo()
     {
-        $result = $this->connector->isSubscribed('nick.k@rxmg.com', 1);
-        $this->assertTrue($result == true);
+       // TBI
     }
 }
